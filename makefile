@@ -1,8 +1,8 @@
 LDLIBS=-lpcap
 
-all: arp-spoof
+all: send-arp
 
-arp-spoof: main.o arphdr.o ethhdr.o ip.o mac.o
+send-arp: main.o arphdr.o ethhdr.o ip.o mac.o
 	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 clean:
